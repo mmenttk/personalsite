@@ -3800,21 +3800,18 @@
         
         .folio-entries .entry {
             flex: none;
+            width: 50%;
             margin: 0;
             padding: 0;
             overflow: hidden;
             position: relative;
-            /* 1. The Mobile-First Default (The "Lines Tingy") */
-            /* By default, every entry takes up the full width. */
-            width: 100%;
         }
-        /* 2. The Desktop Grid (The Beautiful 2x2 Box) */
-        /* This is the magic part. It only applies if the screen is 768px or wider. */
         
-        @media (min-width: 768px) {
+        @media (max-width: 700px) {
             .folio-entries .entry {
-                /* On bigger screens, we go back to the 50% width for the grid. */
-                width: 50%;
+                width: 100%;
+                margin-bottom: var(--vspace-0_5);
+                /* Adds a little space below each item */
             }
         }
         
