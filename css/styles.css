@@ -3808,10 +3808,14 @@
         }
         
         @media (max-width: 700px) {
+            .folio-entries {
+                display: flex;
+                flex-direction: column;
+                /* This is the magic line that stacks them */
+            }
             .folio-entries .entry {
                 width: 100%;
-                margin-bottom: var(--vspace-0_5);
-                /* Adds a little space below each item */
+                /* Makes each item take the full width */
             }
         }
         
